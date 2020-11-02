@@ -40,3 +40,29 @@ class ReverseWithReversed(Approach):
                 break
 
         return result
+
+
+class ReverseWithSlice(Approach):
+    @staticmethod
+    def find_difference(array_a: List[int], array_b: List[int]) -> int:
+        result = maxsize
+
+        a = 0
+        b = 0
+
+        array_a = array_a[::-1]
+
+        m = len(array_a)
+        n = len(array_b)
+        while a < m and b < n:
+            if abs(array_a[a] - array_b[b]) < result:
+                result = abs(array_a[a] - array_b[b])
+
+            if array_a[a] < array_b[b]:
+                a += 1
+            elif array_a[a] > array_b[b]:
+                b += 1
+            else:
+                break
+
+        return result
