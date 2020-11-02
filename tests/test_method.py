@@ -1,5 +1,5 @@
 import pytest
-from method import find_difference
+from methods import ReverseWithReversed
 
 # array A, array B, expected result
 test_cases = (
@@ -20,6 +20,6 @@ class TestApproaches:
     @pytest.mark.parametrize(
         "array_a, array_b, expected_result", test_cases,
     )
-    def test_approach(self, array_a: list, array_b: list, expected_result: int) -> None:
-        result = find_difference(array_a, array_b)
+    def test_reversed(self, array_a: list, array_b: list, expected_result: int) -> None:
+        result = ReverseWithReversed.find_difference(array_a, array_b)
         assert result == expected_result
