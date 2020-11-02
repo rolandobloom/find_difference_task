@@ -1,7 +1,7 @@
-# find_difference_task
+## Task
 Finding minimal absolute difference between two elements of two sorted arrays
 
-###Usage:
+### How to use
 ```shell script
 python find_difference.py
 ```
@@ -22,7 +22,7 @@ or just
 pip install -r requirements.txt
 ```
 
-###Time measure
+### Time measure
 for all three approaches, using automatically generated lists
 ```shell script
 python measure_time.py
