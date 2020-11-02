@@ -30,8 +30,8 @@ class ReverseWithReversed(Approach):
         array_a = reversed(array_a)
         a_element = next(array_a)
         while b < n:
-            if abs(a_element - array_b[b]) < result:
-                result = abs(a_element - array_b[b])
+            if (_result := abs(a_element - array_b[b])) < result:
+                result = _result
 
             if a_element < array_b[b]:
                 try:
@@ -59,8 +59,8 @@ class ReverseWithSlice(Approach):
         m = len(array_a)
         n = len(array_b)
         while a < m and b < n:
-            if abs(array_a[a] - array_b[b]) < result:
-                result = abs(array_a[a] - array_b[b])
+            if (_result := abs(array_a[a] - array_b[b])) < result:
+                result = _result
 
             if array_a[a] < array_b[b]:
                 a += 1
@@ -82,8 +82,8 @@ class GoBackwards(Approach):
 
         n = len(array_b)
         while a >= 0 and b < n:
-            if abs(array_a[a] - array_b[b]) < result:
-                result = abs(array_a[a] - array_b[b])
+            if (_result := abs(array_a[a] - array_b[b])) < result:
+                result = _result
 
             if array_a[a] < array_b[b]:
                 a -= 1
