@@ -21,3 +21,9 @@ or just
 ```shell script
 pip install -r requirements.txt
 ```
+
+###Time measure
+for all three approaches, using automatically generated lists
+```shell script
+python measure_time.py
+```
