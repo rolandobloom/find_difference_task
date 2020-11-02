@@ -14,6 +14,10 @@ class Approach(ABC):
         """
         raise NotImplementedError
 
+    @classmethod
+    def get_subclasses_names(cls) -> List[str]:
+        return [subclass.__name__ for subclass in cls.__subclasses__()]
+
 
 class ReverseWithReversed(Approach):
     @staticmethod
