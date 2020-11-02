@@ -1,5 +1,5 @@
 import pytest
-from methods import ReverseWithReversed, ReverseWithSlice
+from methods import ReverseWithReversed, ReverseWithSlice, GoBackwards
 
 # array A, array B, expected result
 test_cases = (
@@ -29,4 +29,11 @@ class TestApproaches:
     )
     def test_slice(self, array_a: list, array_b: list, expected_result: int) -> None:
         result = ReverseWithSlice.find_difference(array_a, array_b)
+        assert result == expected_result
+
+    @pytest.mark.parametrize(
+        "array_a, array_b, expected_result", test_cases,
+    )
+    def test_backwards(self, array_a: list, array_b: list, expected_result: int) -> None:
+        result = GoBackwards.find_difference(array_a, array_b)
         assert result == expected_result
